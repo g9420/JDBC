@@ -46,7 +46,7 @@
 		
 
 ### 于是我们初步封装的jdbcUtil工具类如下
-#### ```
+#### 
 public class JDBCUtil {
 	private static ThreadLocal<Connection> tol = new ThreadLocal<>();
 
@@ -123,5 +123,4 @@ public class JDBCUtil {
 		}
 	}
 
-
-}```
+}
