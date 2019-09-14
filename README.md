@@ -48,7 +48,6 @@
 ### 于是我们初步封装的jdbcUtil工具类如下
 #### 
 public class JDBCUtil {
-	private static ThreadLocal<Connection> tol = new ThreadLocal<>();
 
 	private static Connection connection = null;
 	private static PreparedStatement statement = null;
@@ -124,3 +123,6 @@ public class JDBCUtil {
 	}
 
 }
+
+#### 其中 db.properties 内容为 drive，url，username,password
+
