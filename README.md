@@ -5,16 +5,17 @@
 #### ![](README_files/1.jpg)
 ### 在开始之前我们先回顾一下jdbc连接数据库的6个步骤
 	1. 加载数据库驱动到jvm虚拟机，通过 Class类的静态方法.forName()
-		+ 例如
-			``` try{//加载oracle的驱动类    
+		* 例如
+			 try{
+				 //加载oracle的驱动类    
 					Class.forName("oracle.jdbc.OracleDriver") ;    
 				}catch(ClassNotFoundException e){    
 					System.out.println("找不到驱动程序类 ，加载驱动失败！");    
 					e.printStackTrace() ;    
-				}    ```
+				}    
 	2. 创建数据库的连接 
-		+ 要连接数据库，需要向java.sql.DriverManager请求并获得Connection对象，该对象就代表一个数据库的连接。  
-		+ 使用DriverManager的getConnectin(String url , String username ,  String password )方法传入指定的欲连接的数据库的路径、数据库的用户名和密码来获得
+		* 要连接数据库，需要向java.sql.DriverManager请求并获得Connection对象，该对象就代表一个数据库的连接。  
+		* 使用DriverManager的getConnectin(String url , String username ,  String password )方法传入指定的欲连接的数据库的路径、数据库的用户名和密码来获得
 
 	3. 创建一个preparedStatement对象
 		+要执行SQL语句，必须获得java.sql.Statement实例，Statement实例分为以下3 种类型：    
